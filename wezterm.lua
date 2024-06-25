@@ -45,7 +45,7 @@ config.colors = {
   },
 }
 
-config.leader = { key = "Space", mods = "CTRL", timeout_milliseconds = 1000 }
+config.leader = { key = "a", mods = "CTRL", timeout_milliseconds = 1000 }
 config.default_prog = { "wsl" }
 config.font_size = 11.0
 config.enable_kitty_graphics = false
@@ -173,16 +173,16 @@ config.keys = {
     action = wezterm.action.ActivateKeyTable({ name = "resize_pane", one_shot = false }),
   },
 
-  -- Move between split panes
-  split_nav("move", "h"),
-  split_nav("move", "j"),
-  split_nav("move", "k"),
-  split_nav("move", "l"),
-  -- Resize panes
-  split_nav("resize", "h"),
-  split_nav("resize", "j"),
-  split_nav("resize", "k"),
-  split_nav("resize", "l"),
+  -- -- Move between split panes
+  -- split_nav("move", "h"),
+  -- split_nav("move", "j"),
+  -- split_nav("move", "k"),
+  -- split_nav("move", "l"),
+  -- -- Resize panes
+  -- split_nav("resize", "h"),
+  -- split_nav("resize", "j"),
+  -- split_nav("resize", "k"),
+  -- split_nav("resize", "l"),
   -- Existing keybindings
   {
     key = "f",
