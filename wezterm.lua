@@ -8,40 +8,42 @@ if wezterm.config_builder then
   config = wezterm.config_builder()
 end
 
--- Colorscheme
+config.disable_default_key_bindings = true
+
+-- -- Colorscheme
 config.colors = {
-  foreground = "#f0f3f6",
-  background = "#0a0c10",
+  foreground = "#f0f3f6", -- fg.default
+  background = "#0a0c10", -- canvas.default
 
-  cursor_bg = "#f0f3f6",
-  cursor_border = "#f0f3f6",
-  cursor_fg = "#0a0c10",
+  cursor_bg = "#f0f3f6", -- fg.default
+  cursor_border = "#f0f3f6", -- fg.default
+  cursor_fg = "#0a0c10", -- canvas.default
 
-  selection_bg = "#204670",
-  selection_fg = "#f0f3f6",
+  selection_bg = "rgba(64,158,255,0.4)", -- selectionBg
+  selection_fg = "#f0f3f6", -- fg.default
 
-  scrollbar_thumb = "#222222",
-  split = "#444444",
+  scrollbar_thumb = "#7a828e", -- border.default
+  split = "#7a828e", -- border.default
 
   ansi = {
-    "#0a0c10", -- "7a828e", change this so that curse doesn't make bg grey
-    "#ff9492",
-    "#26cd4d",
-    "#f0b72f",
-    "#3137ff", -- this has been changed from the original theme to be darker
-    "#cb9eff",
-    "#39c5cf",
-    "#d9dee3",
+    "#0a0c10", -- black
+    "#ff9492", -- red
+    "#71b7ff", -- green "#26cd4d"
+    "#f0b72f", -- yellow
+    "#0a0c10", -- blue "#71b7ff"
+    "#cb9eff", -- magenta
+    "#39c5cf", -- cyan
+    "#d9dee3", -- white
   },
   brights = {
-    "#9ea7b3",
-    "#ffb1af",
-    "#4ae168",
-    "#f7c843",
-    "#91cbff",
-    "#dbb7ff",
-    "#56d4dd",
-    "#ffffff",
+    "#9ea7b3", -- blackBright
+    "#ffb1af", -- redBright
+    "#f0f3f6", -- greenBright "#4ae168"
+    "#f7c843", -- yellowBright
+    "#91cbff", -- blueBright
+    "#dbb7ff", -- magentaBright
+    "#ffb1af", -- cyanBright
+    "#ffffff", -- whiteBright
   },
 }
 
@@ -49,7 +51,7 @@ config.leader = { key = "a", mods = "CTRL", timeout_milliseconds = 1000 }
 config.default_prog = { "wsl" }
 config.font_size = 11.0
 config.enable_kitty_graphics = false
-config.hide_tab_bar_if_only_one_tab = false
+config.hide_tab_bar_if_only_one_tab = true
 config.use_fancy_tab_bar = false
 config.show_new_tab_button_in_tab_bar = false
 config.status_update_interval = 1000
