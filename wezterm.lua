@@ -28,9 +28,9 @@ config.colors = {
   ansi = {
     "#0a0c10", -- black
     "#ff9492", -- red
-    "#71b7ff", -- green "#26cd4d"
+    "#71b7ff", -- blue (originaly green "#26cd4d")
     "#f0b72f", -- yellow
-    "#0a0c10", -- blue "#71b7ff"
+    "#0a0c10", -- black (originaly blue "#71b7ff")
     "#cb9eff", -- magenta
     "#39c5cf", -- cyan
     "#d9dee3", -- white
@@ -38,7 +38,7 @@ config.colors = {
   brights = {
     "#9ea7b3", -- blackBright
     "#ffb1af", -- redBright
-    "#f0f3f6", -- greenBright "#4ae168"
+    "#f0f3f6", -- white (originaly greenBright "#4ae168")
     "#f7c843", -- yellowBright
     "#91cbff", -- blueBright
     "#dbb7ff", -- magentaBright
@@ -282,6 +282,12 @@ config.keys = {
     key = "z",
     mods = "LEADER",
     action = wezterm.action.TogglePaneZoomState,
+  },
+
+  {
+    key = "Insert",
+    mods = "SHIFT",
+    action = wezterm.action({ PasteFrom = "Clipboard" }),
   },
 }
 
